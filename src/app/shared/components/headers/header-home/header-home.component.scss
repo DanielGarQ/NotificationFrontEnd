@@ -1,0 +1,48 @@
+header {
+  background-color: black;
+  height: 60px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.header-logo{
+  position: inherit;
+  margin-top: 5px;
+  margin-left: 40px;
+  width: 130px;
+  height: 50px;
+}
+
+.login-button{
+  position: inherit;
+  color: white;
+  height: 40px;
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color:black;
+  border: 1px solid white;
+  animation: alternate-reverse;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  -webkit-animation: alternate-reverse;
+}
+
+.sign-up-button{
+  position: inherit;
+  color: white;
+  height: 40px;
+  width: 100px;
+  padding: 0;
+  background-color: black;
+  border:0cap;
+  margin-top: 10px;
+  margin-left: 1250px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,7 +12,7 @@ import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
 import { SendNotificationModule } from './feature/send-notification/send-notification.module';
 import { InboxModule } from './feature/inbox/inbox.module';
-import { HeaderHomeComponent } from './shared/components/headers/header-home/header-home.component';
+import { AuthService } from 'src/app/service/auth.service';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,10 @@ import { HeaderHomeComponent } from './shared/components/headers/header-home/hea
     SharedModule,
     SendNotificationModule,
     InboxModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

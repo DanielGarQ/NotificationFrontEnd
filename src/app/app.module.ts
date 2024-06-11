@@ -11,13 +11,14 @@ import { RegisterComponent } from './feature/register/register.component';
 import { SendNotificationModule } from './feature/send-notification/send-notification.module';
 import { InboxModule } from './feature/inbox/inbox.module';
 import { HeaderHomeComponent } from './shared/components/headers/header-home/header-home.component';
+import { SendNotificationRoutingModule } from './feature/send-notification/send-notification-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

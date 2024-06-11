@@ -26,7 +26,7 @@ import { SendNotificationRoutingModule } from './feature/send-notification/send-
     CoreModule,
     SharedModule,
     SendNotificationModule,
-    InboxModule,
+    InboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

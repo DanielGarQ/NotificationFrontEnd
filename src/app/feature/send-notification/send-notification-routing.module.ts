@@ -4,10 +4,10 @@ import { SendNotificationComponent } from './components/send-notification/send-n
 
 const routes: Routes = [
   { path: "", component: SendNotificationComponent},
-]
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
 

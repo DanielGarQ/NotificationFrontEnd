@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./send-notification.component.scss']
 })
 export class SendNotificationComponent {
-
+  title = 'application-front';
 }

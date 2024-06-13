@@ -1,0 +1,24 @@
+.notification-details-container{
+  height: 650px;
+  border: 1px solid #ccc;
+  background-color: #dedede;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-indent: 20PX;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.select-text{
+  margin-left: 170px;
+  color: grey;
+}
+
+.details-icon{
+  margin-left: 250px;
+  width: 200px;
+  height: 200px;
+  margin-top: 200px;
+  margin-bottom: 20px;
+  border: solid, white;
+}

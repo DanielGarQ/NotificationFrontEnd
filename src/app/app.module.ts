@@ -12,6 +12,7 @@ import { SendNotificationModule } from './feature/send-notification/send-notific
 import { InboxModule } from './feature/inbox/inbox.module';
 import { HeaderHomeComponent } from './shared/components/headers/header-home/header-home.component';
 import { SendNotificationRoutingModule } from './feature/send-notification/send-notification-routing.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SendNotificationRoutingModule } from './feature/send-notification/send-
     CoreModule,
     SharedModule,
     SendNotificationModule,
-    InboxModule
+    InboxModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

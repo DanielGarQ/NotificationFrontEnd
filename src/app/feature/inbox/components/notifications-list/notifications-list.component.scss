@@ -1,9 +1,10 @@
 .notification-list-container {
-  margin-top: 60px;
-  width: 50%;
-  height: 600px;
+  height: 650px;
   overflow-y: auto;
   border: 1px solid #ccc;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-indent: 20PX;
 }
 
 .user-item-1{
@@ -12,6 +13,7 @@
   padding: 10px;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
+  font-size: 1.5rem;
 }
 
 .user-item-1 img {
@@ -29,6 +31,7 @@
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid black;
+  font-size: 1.5rem;
 }
 
 .user-item img {
@@ -39,4 +42,18 @@
 
 .user-item span {
   flex-grow: 1;
+}
+
+.delete-notification{
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 2.5px;
+}
+
+.delete-notification img{
+  width: 24px;
+  height: 24px;
 }

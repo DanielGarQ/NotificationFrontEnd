@@ -4,10 +4,10 @@
   border: 1px solid #ccc;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  text-indent: 20PX;
+  text-indent: 20px;
 }
 
-.user-item-1{
+.user-item-1 {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -32,6 +32,7 @@
   padding: 10px;
   border-bottom: 1px solid black;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .user-item img {
@@ -44,7 +45,7 @@
   flex-grow: 1;
 }
 
-.delete-notification{
+.delete-notification {
   position: relative;
   border: none;
   background: none;
@@ -53,7 +54,7 @@
   margin-top: 2.5px;
 }
 
-.delete-notification img{
+.delete-notification img {
   width: 24px;
   height: 24px;
 }

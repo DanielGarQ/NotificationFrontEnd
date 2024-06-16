@@ -19,7 +19,6 @@ export class AuthService {
 
   // Método para iniciar sesión
   login(userData: any): Observable<any> {
-    console.log('Datos del formulario:', userData);
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post<any>(`${this.apiUrl}/login`, userData, { headers });
   }

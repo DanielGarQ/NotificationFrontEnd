@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-general-header',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class GeneralHeaderComponent {
 
+  constructor(private router: Router) {}
+
+  redirectToHome(): void {
+    this.router.navigate(['/home']);
+  }
 }

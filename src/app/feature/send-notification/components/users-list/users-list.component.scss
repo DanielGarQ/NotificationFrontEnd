@@ -3,26 +3,7 @@
   border: 1px solid #ccc;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
-  text-indent: 20PX;
-}
-
-.user-item-1{
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
-  font-size: 1.5rem;
-}
-
-.user-item-1 img {
-  width: 65px;
-  height: 60px;
-  margin-right: 10px;
-}
-
-.user-item-1 span {
-  flex-grow: 1;
+  text-indent: 20px;
 }
 
 .user-item {
@@ -43,11 +24,15 @@
   flex-grow: 1;
 }
 
-.checkbox{
+.checkbox {
   width: 20px;
   height: 20px;
   margin-right: 30px;
   position: relative;
 }
 
-
+.empty-list-message {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}

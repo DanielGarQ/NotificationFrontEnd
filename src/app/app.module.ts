@@ -12,7 +12,8 @@ import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
 import { SendNotificationModule } from './feature/send-notification/send-notification.module';
 import { InboxModule } from './feature/inbox/inbox.module';
-import { AuthService } from 'src/app/service/auth.service';
+import { AuthService } from './service/auth.service';
+import { PersonaService } from './service/persona.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { AuthService } from 'src/app/service/auth.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

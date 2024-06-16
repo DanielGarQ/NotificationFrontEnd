@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../../service/auth.service'; // Ajusta la ruta según la estructura de tu proyecto
+import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
+import { PersonaService } from '../../service/persona.service';
+import { Persona } from '../../service/persona.model';
 
 @Component({
   selector: 'app-register',
@@ -17,17 +19,38 @@ export class RegisterComponent {
     password: ''
   };
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private personaService: PersonaService
+  ) {}
 
   register() {
     this.authService.register(this.userData).subscribe(
       response => {
-        this.authService.setToken(response.token); // Almacena el token en localStorage
-        this.router.navigate(['/dashboard']); // Navega a la vista de inicio o dashboard
+        const token = response.token;
+        this.authService.setToken(token);
+        this.personaService.getPersona(this.userData.correoElectronico, token).subscribe(
+          personaData => {
+            const persona: Persona = {
+              identificador: personaData.identificador,
+              primerNombre: personaData.primerNombre,
+              segundoNombre: personaData.segundoNombre,
+              primerApellido: personaData.primerApellido,
+              segundoApellido: personaData.segundoApellido,
+              correoElectronico: personaData.correoElectronico,
+              token: token
+            }; // Almacena la persona en el servicio PersonaService
+            this.router.navigate(['/home']);
+          },
+          error => {
+            console.error('Error al obtener los datos de la persona:', error);
+            alert('Error al obtener los datos de la persona. Por favor, inténtelo de nuevo más tarde.');
+          }
+        );
       },
       error => {
         console.error('Error en el registro:', error);
-        // Agrega un mensaje de error descriptivo para el usuario
         alert('Ha ocurrido un error durante el registro. Por favor, inténtelo de nuevo más tarde.');
       }
     );

@@ -1,5 +1,5 @@
 <header>
-  <img src="assets/TES LOGO.png" alt="Logo" class="header-logo">
+  <img src="assets/TES LOGO.png" alt="Logo" class="header-logo" (click)="redirectToHome()">
   <div class="auth-buttons">
     <ng-container *ngIf="isLoggedIn(); else showLoginButtons">
       <button class="logout-button" (click)="logout()">Logout</button>

@@ -22,6 +22,10 @@ export class HeaderHomeComponent {
     this.router.navigate(['/home']);
   }
 
+  redirectToHome(): void {
+    this.router.navigate(['/home']);
+  }
+
   redirectToLogin(): void {
     this.router.navigate(['/login']);
   }

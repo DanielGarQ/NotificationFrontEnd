@@ -1,6 +1,6 @@
 header {
   background-color: black;
-  height: 60px;
+  height: 80px;
   box-sizing: border-box;
   position: absolute;
   top: 0;
@@ -9,6 +9,7 @@ header {
   justify-content: space-between; /* Para separar el logo y los botones */
   align-items: center; /* Para centrar los elementos verticalmente */
   padding: 0 40px; /* Añade un padding lateral */
+  cursor: pointer;
 }
 
 .header-logo {
@@ -43,5 +44,5 @@ header {
 .login-button:hover,
 .sign-up-button:hover,
 .logout-button:hover {
-  transform: scale(1.1); /* Aumenta el tamaño al pasar el cursor */
+  transform: scale(1.1);
 }

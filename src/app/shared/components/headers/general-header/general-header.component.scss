@@ -1,16 +1,18 @@
 header {
   background-color: black;
-  height: 60px;
+  height: 80px;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between; /* Para separar el logo y los botones */
+  align-items: center; /* Para centrar los elementos verticalmente */
+  padding: 0 40px; /* Añade un padding lateral */
 }
 
 .header-logo {
-  position: inherit;
-  margin-top: 5px;
-  margin-left: 40px;
+  cursor: pointer;
   width: 130px;
   height: 50px;
 }
@@ -20,22 +22,19 @@ header {
   color: white;
   height: 40px;
   width: 100px;
-  padding: 0;
   background-color: black;
   border: 0;
-  margin-top: 10px;
-  margin-left: 1400px; /* Ajusta este valor según sea necesario */
+  // margin-left: 1400px;
   font-family: 'Open Sans', sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
   text-align: center; /* Centra el texto horizontalmente */
-  line-height: 40px; /* Centra verticalmente el texto en el botón */
   cursor: pointer;
   transition: all 0.3s ease; /* Transición suave para el efecto de hover */
 }
 
 .home-button:hover {
-  background-color: #333; /* Cambia el color de fondo al pasar el cursor */
+  transform: scale(1.1);
 }
 
 .home-button:active {

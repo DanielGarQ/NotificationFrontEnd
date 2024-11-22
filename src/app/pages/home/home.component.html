@@ -1,1 +1,21 @@
-<h2>home works!</h2>
+<div class="img-container">
+  <!-- <img src="assets/home.png" alt="home" class="home-background"> -->
+  <div class="text-box">
+    <p>Envíe notificaciones desde cualquier lugar con un solo click.</p>
+    <div class="image-button">
+      <button
+        mat-raised-button
+        mat-Tooltip="Enviar Mensaje"
+        class="image-button home-inicio-2"
+        (click)="navigateToSendNotification()"
+      >
+        <img src="assets/inicio 2.png" alt="inicio 2" />
+        Enviar Notificación
+      </button>
+      <button class="image-button home-inicio-3" (click)="navigateToInbox()">
+        <img src="assets/inicio 3.1.png" alt="inicio 3" />
+        Mis Notificaciones
+      </button>
+    </div>
+  </div>
+</div>

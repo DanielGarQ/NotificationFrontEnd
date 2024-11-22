@@ -13,4 +13,12 @@
   display: flex;
   background-color: white;
   grid-area: content;
+  position: relative;
+}
+
+.content > * {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }

@@ -1,0 +1,42 @@
+.footer{
+  display: flex;
+  background-color: black;
+  grid-area: footer;
+  width: 100%;
+  height: var(--footer-height);
+  color: #fff;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer-logo{
+  margin-top: 30px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+.footer-social-logo{
+  margin-top: 15px;
+}
+
+.footer-instagram-logo{
+  width: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.footer-facebook-logo{
+  width: 19px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.footer-x-logo{
+  width: 30px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.footer-text{
+  margin: 0;
+}

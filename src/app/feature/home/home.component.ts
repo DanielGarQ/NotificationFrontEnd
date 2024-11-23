@@ -10,13 +10,16 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
+  isLoggedIn(): boolean {
+    return localStorage.getItem('persona') !== null;
+  }
+
   navigateToSendNotification(): void {
     if (localStorage.getItem('persona')) {
       this.router.navigate(['/send-notification']);
     } else {
       alert('Debe iniciar sesión o registrarse primero.');
-      // Redirigir al componente de login o registro si es necesario
-      this.router.navigate(['/login']); // Por ejemplo, redirige al login
+      this.router.navigate(['/login']);
     }
   }
 
@@ -25,8 +28,7 @@ export class HomeComponent {
       this.router.navigate(['/inbox']);
     } else {
       alert('Debe iniciar sesión o registrarse primero.');
-      // Redirigir al componente de login o registro si es necesario
-      this.router.navigate(['/login']); // Por ejemplo, redirige al login
+      this.router.navigate(['/login']);
     }
   }
 }

@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './feature/login/login.component';
 import { RegisterComponent } from './feature/register/register.component';
+import { HomeComponent } from './components/home/home.component';
 // import { HomeComponent } from './feature/home/home.component';
-import { HomeComponent } from './pages/home/home.component';
 
 export const routes: Routes = [
   {path:'', redirectTo: '/home', pathMatch: 'full'},

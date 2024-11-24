@@ -1,12 +1,18 @@
-<app-session-header></app-session-header>
-<div class="top-buttons">
-  <app-top-buttons></app-top-buttons>
-</div>
 <div class="inbox">
-  <div class="notificaciones">
-    <app-notifications-list></app-notifications-list>
+  <div class="sidebar">
+    <button class="new-notification-button" (click)="navigateToSendNotification()">
+      <img src="assets/enviar notificacion.png" class="new-notification-icon" />
+      Nueva notificación
+    </button>
+    <app-notifications-list />
+    <button class="Delete-all-button">
+      <img src="assets/basurero gris.png" class="trash-icon" />
+      Eliminar todo
+    </button>
   </div>
-  <div class="notification-content">
-    <app-notification-content></app-notification-content>
+  <div class="divider"></div>
+  <!-- Divider -->
+  <div class="detail">
+    <app-notification-content />
   </div>
 </div>

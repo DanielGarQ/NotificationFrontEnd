@@ -16,8 +16,6 @@ import { PersonaService } from './service/persona.service';
 import { HeaderV2Component } from './components/header-v2/header-v2.component';
 import { FooterV2Component } from './components/footer-v2/footer-v2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
@@ -40,8 +38,6 @@ import { HomeComponent } from './components/home/home.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTooltipModule,
-    MatButtonModule
   ],
   providers: [AuthService, PersonaService],
   bootstrap: [AppComponent]

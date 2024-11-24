@@ -1,9 +1,11 @@
-<div class="users-list-container">
-  <h1>Destinatario(s)</h1>
+<!-- <div class="destinatarios"> -->
+  <!-- </div> -->
+  <div class="users-list-container">
+  <h2 style="position: sticky">Destinatario(s)</h2>
   <div *ngFor="let persona of personas" class="user-item">
-    <img src="assets/image.png" alt="User Icon">
-    <span>{{ persona.correoElectronico }}</span>
-    <input type="checkbox" [id]="persona.id" class="checkbox">
+    <img src="assets/image.png" alt="User Icon" />
+    <p>{{ persona.correoElectronico }}</p>
+    <input type="checkbox" [id]="persona.id" class="custom-checkbox" />
   </div>
   <div *ngIf="personas.length === 0" class="empty-list-message">
     No hay usuarios disponibles.

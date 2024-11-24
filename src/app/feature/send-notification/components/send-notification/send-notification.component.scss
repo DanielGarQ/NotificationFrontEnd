@@ -1,12 +1,17 @@
 .send-notification{
   display: flex;
-  margin-top: 60px;
+  height: 100%;
+  width: 100%;
 }
 
-.users-list, .notification-details{
-  flex: 1;
+.users-list {
+  height: calc(100vh - 320px);
 }
 
 .notification-details{
+  display: flex;
+  position: relative;
+  height: 100%;
+  width: calc(100vw - 400px);
   background-color:  #dedede;
 }

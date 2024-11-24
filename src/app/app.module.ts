@@ -8,7 +8,7 @@ import { CoreModule } from './core/core.module';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './feature/register/register.component';
+import { RegisterComponent } from './components/register/register.component';
 import { SendNotificationModule } from './feature/send-notification/send-notification.module';
 import { InboxModule } from './feature/inbox/inbox.module';
 import { AuthService } from './service/auth.service';

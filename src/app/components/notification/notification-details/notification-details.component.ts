@@ -42,6 +42,11 @@ export class NotificationDetailsComponent implements OnInit {
     this.request.fechaCreacion = new Date().toISOString();
     this.request.fechaProgramada = new Date().toISOString();
 
+    if (this.request.destinatario.length == 0) {
+      alert("Debe seleccionar destinatario(s)");
+      return;
+    }
+
     this.notificacionService.createNotificacion(this.request, this.request.autor?.token!).subscribe(
       (response: any) => {
         console.log('Notificación creada:', response);

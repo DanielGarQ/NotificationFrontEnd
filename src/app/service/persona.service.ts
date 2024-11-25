@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs'; // Importa 'of' desde RxJS
 import { switchMap } from 'rxjs/operators';
-import { Persona } from './persona.model';
+import { Persona } from '../model/persona.model';
 
 @Injectable({
   providedIn: 'root'

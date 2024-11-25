@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { Router } from '@angular/router';
 import { PersonaService } from '../../service/persona.service';
-import { Persona } from '../../service/persona.model';
+import { Persona } from '../../model/persona.model';
 
 @Component({
   selector: 'app-register',

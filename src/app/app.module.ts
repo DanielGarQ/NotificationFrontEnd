@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { SendNotificationModule } from './feature/send-notification/send-notification.module';
 import { InboxModule } from './feature/inbox/inbox.module';
 import { AuthService } from './service/auth.service';
 import { PersonaService } from './service/persona.service';
@@ -17,6 +16,10 @@ import { HeaderV2Component } from './components/header-v2/header-v2.component';
 import { FooterV2Component } from './components/footer-v2/footer-v2.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { NotificationDetailsComponent } from './components/notification/notification-details/notification-details.component';
+import { NotificationsListComponent } from './components/notification/notifications-list/notifications-list.component';
+import { SendNotificationComponent } from './components/notification/send-notification/send-notification.component';
+import { UsersListComponent } from './components/notification/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     RegisterComponent,
     HeaderV2Component,
-    FooterV2Component
+    FooterV2Component,
+    NotificationDetailsComponent,
+    SendNotificationComponent,
+    UsersListComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,6 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    SendNotificationModule,
     InboxModule,
     FormsModule,
     HttpClientModule,

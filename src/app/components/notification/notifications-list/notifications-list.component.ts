@@ -3,9 +3,9 @@ import { Router } from '@angular/router';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, switchMap, map } from 'rxjs/operators';
-import { Persona } from 'src/app/service/persona.model';
-import { BuzonNotificacion } from 'src/app/service/buzon-notificacion.model';
-import { Notificacion } from 'src/app/service/notificacion.model';
+import { Persona } from 'src/app/model/persona.model';
+import { BuzonNotificacion } from 'src/app/model/buzon-notificacion.model';
+import { Notificacion } from 'src/app/model/notificacion.model';
 
 @Component({
   selector: 'app-notifications-list',

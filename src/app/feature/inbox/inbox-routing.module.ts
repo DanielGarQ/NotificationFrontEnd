@@ -1,8 +1,8 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { InboxComponent } from "./components/inbox/inbox.component";
-import { NotificationsListComponent } from "./components/notifications-list/notifications-list.component";
-import { NotificationContentComponent } from "./components/notification-content/notification-content.component";
+import { NotificationsListComponent } from "../../components/notification/notifications-list/notifications-list.component";
+import { NotificationContentComponent } from "../../components/notification/notification-content/notification-content.component";
 
 const routes: Routes = [
   {

@@ -1,12 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-
-interface Persona {
-  id: number;
-  nombre: string;
-  correoElectronico: string;
-  token: string;
-}
+import { SelectedDestinatariosService } from 'src/app/service/destinatarios-seleccionados.service';
+import { Persona } from 'src/app/model/persona.model';
 
 @Component({
   selector: 'app-users-list',
@@ -16,8 +11,12 @@ interface Persona {
 export class UsersListComponent implements OnInit {
 
   personas: Persona[] = [];
+  selectedPersonas: Persona[] = []; // Lista para almacenar los seleccionados
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private selectedDestinatariosService: SelectedDestinatariosService // Inyectar el servicio
+  ) {}
 
   ngOnInit(): void {
     const personaString = localStorage.getItem('persona');
@@ -27,7 +26,6 @@ export class UsersListComponent implements OnInit {
       this.http.get<Persona[]>('http://localhost:8080/v1/persona/all', { headers }).subscribe(
         (data) => {
           this.personas = data;
-          console.log('Personas cargadas:', this.personas);
         },
         (error) => {
           console.error('Error al cargar personas:', error);
@@ -36,5 +34,16 @@ export class UsersListComponent implements OnInit {
     } else {
       console.warn('Token no encontrado en localStorage. No se puede cargar personas.');
     }
+  }
+
+  onCheckboxChange(persona: Persona, event: any) {
+    if (event.target.checked) {
+      this.selectedPersonas.push(persona); // Agrega la persona seleccionada
+    } else {
+      this.selectedPersonas = this.selectedPersonas.filter(p => p.identificador !== persona.identificador); // Elimina la persona deseleccionada
+    }
+
+    // Actualizar el servicio con la lista de seleccionados
+    this.selectedDestinatariosService.setDestinatarios(this.selectedPersonas);
   }
 }

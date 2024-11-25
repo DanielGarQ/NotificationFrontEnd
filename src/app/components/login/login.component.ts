@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
 import { PersonaService } from '../../service/persona.service';
 import { Router } from '@angular/router';
-import { Persona } from '../../service/persona.model';
+import { Persona } from '../../model/persona.model';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
   userData = {

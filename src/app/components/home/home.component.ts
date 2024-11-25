@@ -11,6 +11,7 @@ export class HomeComponent {
   constructor(private router: Router) {}
 
   isLoggedIn(): boolean {
+    console.log(localStorage.getItem("persona"));
     return localStorage.getItem('persona') !== null;
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Notificacion } from 'src/app/service/notificacion.model';
+import { Notificacion } from 'src/app/model/notificacion.model';
 
 @Component({
   selector: 'app-notification-content',

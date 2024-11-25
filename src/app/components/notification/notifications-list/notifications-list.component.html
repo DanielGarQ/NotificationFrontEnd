@@ -4,7 +4,7 @@
     <img src="assets/inbox notificacion.png" alt="User Icon">
     <div class="notification-details">
       <h3>{{ notificacion.titulo }}</h3>
-      <p>{{ notificacion.autor.correoElectronico }}</p>
+      <p>{{ notificacion.autor!.correoElectronico }}</p>
       <p>{{ notificacion.fechaCreacion | date:'short' }}</p>
     </div>
     <button class="view-notification" (click)="verNotificacion(notificacion)">
